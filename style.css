@@ -2,8 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow: visible;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
 }
 
 header {
@@ -27,7 +27,7 @@ i {
 main {
     background: linear-gradient(#141c58, white);
     width: 100%;
-    height: 100vh;
+    height: 70vh;
 }
 
 #produto {
@@ -41,8 +41,44 @@ main {
     padding-top: 50px;
 }
 
-#produto img{
+#produto img {
     width: 900px;
-    margin-top:-28px;
+    margin-top: -28px;
+}
+
+.valor {
+    width: 100%;
+    flex-direction: column;
+    background-color: none;
+    text-align: center;
+}
+
+#preco {
+    width: 95px;
+    height: 35px;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #447cdc;
+}
+
+.valor p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+    font-size: 19px;
+    padding: 25px;
+}
+
+.destaques{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+}
+
+.links i {
+    color: black;
 }
 
