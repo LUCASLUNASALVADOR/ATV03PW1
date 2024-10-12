@@ -120,3 +120,115 @@ main {
 
 
 }
+
+.gallery-container {
+    position: relative;
+    width: 300px;
+    height: 600px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .slideshow {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .slides {
+    display: flex;
+    width: 600%;
+    height: 100%;
+    transition: transform 10s ease;
+  }
+  
+  .slide {
+    width: 100%;
+    flex-shrink: 0;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Estilizando os radio buttons */
+  input[type="radio"] {
+    display: none;
+  }
+  
+  /* Configurações para cada slide */
+  #slide1:checked ~ .slides {
+    transform: translateX(0);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  #slide2:checked ~ .slides {
+    transform: translateX(-100%);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  #slide3:checked ~ .slides {
+    transform: translateX(-200%);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  #slide4:checked ~ .slides {
+    transform: translateX(-300%);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  #slide5:checked ~ .slides {
+    transform: translateX(-400%);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  #slide6:checked ~ .slides {
+    transform: translateX(-500%);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  
+  /* Indicadores */
+  .indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  input[type="radio"]:checked + .dot {
+    background-color: #333;
+  }
+  
+  /* Animação automática */
+  @keyframes slideAnimation {
+    0% { transform: translateX(0); }
+    16% { transform: translateX(-100%); }
+    33% { transform: translateX(-200%); }
+    50% { transform: translateX(-300%); }
+    66% { transform: translateX(-400%); }
+    83% { transform: translateX(-500%); }
+    100% { transform: translateX(0); }
+  }
+  
+
+  
